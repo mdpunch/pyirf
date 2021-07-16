@@ -1,0 +1,6 @@
+interpolate_effective_area_per_energy_and_fov
+=============================================
+
+.. currentmodule:: pyirf.interpolation
+
+.. autofunction:: interpolate_effective_area_per_energy_and_fov

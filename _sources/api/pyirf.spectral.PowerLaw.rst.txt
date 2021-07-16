@@ -1,0 +1,19 @@
+PowerLaw
+========
+
+.. currentmodule:: pyirf.spectral
+
+.. autoclass:: PowerLaw
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~PowerLaw.__call__
+      ~PowerLaw.from_simulation
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: __call__
+   .. automethod:: from_simulation

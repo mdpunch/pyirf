@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyirf.simulations &mdash; pyirf  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+    <link rel="canonical" href="https://cta-observatory.github.io/pyirf_modules/pyirf/simulations.html"/>
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyirf
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.dev1+g0f7c996
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction to <code class="docutils literal notranslate"><span class="pre">pyirf</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/index.html">Example Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../AUTHORS.html">Authors</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../irf/index.html">Instrument Response Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sensitivity.html">Sensitivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../benchmarks/index.html">Benchmarks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cuts.html">Calculating and Applying Cuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cut_optimization.html">Cut Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../simulation.html">Simulation Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spectral.html">Event Weighting and Spectrum Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistics.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../binning.html">Binning and Histogram Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../io/index.html">Input / Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interpolation.html">Interpolation of IRFs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gammapy.html">Gammapy Interoperability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utils.html">Utility functions</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyirf</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>pyirf.simulations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for pyirf.simulations</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;SimulatedEventsInfo&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<div class="viewcode-block" id="SimulatedEventsInfo"><a class="viewcode-back" href="../../api/pyirf.simulations.SimulatedEventsInfo.html#pyirf.simulations.SimulatedEventsInfo">[docs]</a><span class="k">class</span> <span class="nc">SimulatedEventsInfo</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Information about all simulated events, for calculating event weights.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n_showers: int</span>
+<span class="sd">        Total number of simulated showers. If reuse was used, this</span>
+<span class="sd">        should already include the reuse.</span>
+<span class="sd">    energy_min: u.Quantity[energy]</span>
+<span class="sd">        Lower limit of the simulated energy range</span>
+<span class="sd">    energy_max: u.Quantity[energy]</span>
+<span class="sd">        Upper limit of the simulated energy range</span>
+<span class="sd">    max_impact: u.Quantity[length]</span>
+<span class="sd">        Maximum simulated impact parameter</span>
+<span class="sd">    spectral_index: float</span>
+<span class="sd">        Spectral Index of the simulated power law with sign included.</span>
+<span class="sd">    viewcone: u.Quantity[angle]</span>
+<span class="sd">        Opening angle of the viewcone</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;n_showers&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;energy_min&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;energy_max&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;max_impact&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;spectral_index&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;viewcone&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span>
+        <span class="n">energy_min</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">,</span> <span class="n">energy_max</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">,</span> <span class="n">max_impact</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">,</span> <span class="n">viewcone</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">n_showers</span><span class="p">,</span> <span class="n">energy_min</span><span class="p">,</span> <span class="n">energy_max</span><span class="p">,</span> <span class="n">max_impact</span><span class="p">,</span> <span class="n">spectral_index</span><span class="p">,</span> <span class="n">viewcone</span>
+    <span class="p">):</span>
+        <span class="c1">#: Total number of simulated showers, if reuse was used, this must</span>
+        <span class="c1">#: already include reuse</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_showers</span> <span class="o">=</span> <span class="n">n_showers</span>
+        <span class="c1">#: Lower limit of the simulated energy range</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">energy_min</span> <span class="o">=</span> <span class="n">energy_min</span>
+        <span class="c1">#: Upper limit of the simulated energy range</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">energy_max</span> <span class="o">=</span> <span class="n">energy_max</span>
+        <span class="c1">#: Maximum simualted impact radius</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_impact</span> <span class="o">=</span> <span class="n">max_impact</span>
+        <span class="c1">#: Spectral index of the simulated power law with sign included</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spectral_index</span> <span class="o">=</span> <span class="n">spectral_index</span>
+        <span class="c1">#: Opening angle of the viewcone</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">viewcone</span> <span class="o">=</span> <span class="n">viewcone</span>
+
+        <span class="k">if</span> <span class="n">spectral_index</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;spectral index must be &lt;= -1&quot;</span><span class="p">)</span>
+
+    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">energy_bins</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">calculate_n_showers_per_energy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy_bins</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculate number of showers that were simulated in the given energy intervals</span>
+
+<span class="sd">        This assumes the events were generated and from a powerlaw</span>
+<span class="sd">        like CORSIKA simulates events.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        energy_bins: astropy.units.Quantity[energy]</span>
+<span class="sd">            The interval edges for which to calculate the number of simulated showers</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        n_showers: numpy.ndarray</span>
+<span class="sd">            The expected number of events inside each of the ``energy_bins``.</span>
+<span class="sd">            This is a floating point number.</span>
+<span class="sd">            The actual numbers will follow a poissionian distribution around this</span>
+<span class="sd">            expected value.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">bins</span> <span class="o">=</span> <span class="n">energy_bins</span>
+        <span class="n">e_low</span> <span class="o">=</span> <span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">e_high</span> <span class="o">=</span> <span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="n">e_min</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">energy_min</span>
+        <span class="n">e_max</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">energy_max</span>
+
+        <span class="n">integral</span> <span class="o">=</span> <span class="n">_powerlaw_pdf_integral</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spectral_index</span><span class="p">,</span> <span class="n">e_low</span><span class="p">,</span> <span class="n">e_high</span><span class="p">,</span> <span class="n">e_min</span><span class="p">,</span> <span class="n">e_max</span>
+        <span class="p">)</span>
+
+        <span class="n">integral</span><span class="p">[</span><span class="n">e_high</span> <span class="o">&lt;=</span> <span class="n">e_min</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">integral</span><span class="p">[</span><span class="n">e_low</span> <span class="o">&gt;=</span> <span class="n">e_max</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">e_high</span> <span class="o">&gt;</span> <span class="n">e_max</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">e_low</span> <span class="o">&lt;</span> <span class="n">e_max</span><span class="p">)</span>
+        <span class="n">integral</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">_powerlaw_pdf_integral</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spectral_index</span><span class="p">,</span> <span class="n">e_low</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">e_max</span><span class="p">,</span> <span class="n">e_min</span><span class="p">,</span> <span class="n">e_max</span>
+        <span class="p">)</span>
+
+        <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">e_high</span> <span class="o">&gt;</span> <span class="n">e_min</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">e_low</span> <span class="o">&lt;</span> <span class="n">e_min</span><span class="p">)</span>
+        <span class="n">integral</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">_powerlaw_pdf_integral</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spectral_index</span><span class="p">,</span> <span class="n">e_min</span><span class="p">,</span> <span class="n">e_high</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">e_min</span><span class="p">,</span> <span class="n">e_max</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_showers</span> <span class="o">*</span> <span class="n">integral</span>
+
+    <span class="k">def</span> <span class="nf">calculate_n_showers_per_fov</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fov_bins</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculate number of showers that were simulated in the given fov bins.</span>
+
+<span class="sd">        This assumes the events were generated uniformly distributed per solid angle,</span>
+<span class="sd">        like CORSIKA simulates events with the VIEWCONE option.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        fov_bins: astropy.units.Quantity[angle]</span>
+<span class="sd">            The FOV bin edges for which to calculate the number of simulated showers</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        n_showers: numpy.ndarray(ndim=2)</span>
+<span class="sd">            The expected number of events inside each of the ``fov_bins``.</span>
+<span class="sd">            This is a floating point number.</span>
+<span class="sd">            The actual numbers will follow a poissionian distribution around this</span>
+<span class="sd">            expected value.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">fov_bins</span> <span class="o">=</span> <span class="n">fov_bins</span>
+        <span class="n">fov_low</span> <span class="o">=</span> <span class="n">fov_bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">fov_high</span> <span class="o">=</span> <span class="n">fov_bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+        <span class="n">fov_integral</span> <span class="o">=</span> <span class="n">_viewcone_pdf_integral</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">viewcone</span><span class="p">,</span> <span class="n">fov_low</span><span class="p">,</span> <span class="n">fov_high</span><span class="p">)</span>
+        <span class="n">viewcone</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">viewcone</span>
+        <span class="c1"># check if any of the bins are outside the max viewcone</span>
+        <span class="n">fov_integral</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">fov_high</span> <span class="o">&lt;=</span> <span class="n">viewcone</span><span class="p">,</span> <span class="n">fov_integral</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># identify the bin with the maximum viewcone inside</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">viewcone</span> <span class="o">&gt;</span> <span class="n">fov_low</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">viewcone</span> <span class="o">&lt;</span> <span class="n">fov_high</span><span class="p">)</span>
+        <span class="n">fov_integral</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">_viewcone_pdf_integral</span><span class="p">(</span><span class="n">viewcone</span><span class="p">,</span> <span class="n">fov_low</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">viewcone</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_showers</span> <span class="o">*</span> <span class="n">fov_integral</span>
+
+    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">energy_bins</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">,</span> <span class="n">fov_bins</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">calculate_n_showers_per_energy_and_fov</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy_bins</span><span class="p">,</span> <span class="n">fov_bins</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculate number of showers that were simulated in the given</span>
+<span class="sd">        energy and fov bins.</span>
+
+<span class="sd">        This assumes the events were generated uniformly distributed per solid angle,</span>
+<span class="sd">        and from a powerlaw in energy like CORSIKA simulates events.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        energy_bins: astropy.units.Quantity[energy]</span>
+<span class="sd">            The energy bin edges for which to calculate the number of simulated showers</span>
+<span class="sd">        fov_bins: astropy.units.Quantity[angle]</span>
+<span class="sd">            The FOV bin edges for which to calculate the number of simulated showers</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        n_showers: numpy.ndarray(ndim=2)</span>
+<span class="sd">            The expected number of events inside each of the</span>
+<span class="sd">            ``energy_bins`` and ``fov_bins``.</span>
+<span class="sd">            Dimension (n_energy_bins, n_fov_bins)</span>
+<span class="sd">            This is a floating point number.</span>
+<span class="sd">            The actual numbers will follow a poissionian distribution around this</span>
+<span class="sd">            expected value.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># energy distribution and fov distribution are independent in CORSIKA,</span>
+        <span class="c1"># so just multiply both distributions.</span>
+        <span class="n">e_integral</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_n_showers_per_energy</span><span class="p">(</span><span class="n">energy_bins</span><span class="p">)</span>
+        <span class="n">fov_integral</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_n_showers_per_fov</span><span class="p">(</span><span class="n">fov_bins</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">e_integral</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span> <span class="o">*</span> <span class="n">fov_integral</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_showers</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{self.__class__.__name__}</span><span class="s2">(&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;n_showers=</span><span class="si">{self.n_showers}</span><span class="s2">, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;energy_min=</span><span class="si">{self.energy_min:.3f}</span><span class="s2">, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;energy_max=</span><span class="si">{self.energy_max:.2f}</span><span class="s2">, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;spectral_index=</span><span class="si">{self.spectral_index:.1f}</span><span class="s2">, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;max_impact=</span><span class="si">{self.max_impact:.2f}</span><span class="s2">, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;viewcone=</span><span class="si">{self.viewcone}</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;)&quot;</span>
+        <span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_powerlaw_pdf_integral</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">e_low</span><span class="p">,</span> <span class="n">e_high</span><span class="p">,</span> <span class="n">e_min</span><span class="p">,</span> <span class="n">e_max</span><span class="p">):</span>
+    <span class="c1"># strip units, make sure all in the same unit</span>
+    <span class="n">e_low</span> <span class="o">=</span> <span class="n">e_low</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">)</span>
+    <span class="n">e_high</span> <span class="o">=</span> <span class="n">e_high</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">)</span>
+    <span class="n">e_min</span> <span class="o">=</span> <span class="n">e_min</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">)</span>
+    <span class="n">e_max</span> <span class="o">=</span> <span class="n">e_max</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">)</span>
+
+    <span class="n">int_index</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">normalization</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">e_max</span> <span class="o">**</span> <span class="n">int_index</span> <span class="o">-</span> <span class="n">e_min</span> <span class="o">**</span> <span class="n">int_index</span><span class="p">)</span>
+    <span class="n">e_term</span> <span class="o">=</span> <span class="n">e_high</span> <span class="o">**</span> <span class="n">int_index</span> <span class="o">-</span> <span class="n">e_low</span> <span class="o">**</span> <span class="n">int_index</span>
+    <span class="k">return</span> <span class="n">e_term</span> <span class="o">*</span> <span class="n">normalization</span>
+
+
+<span class="k">def</span> <span class="nf">_viewcone_pdf_integral</span><span class="p">(</span><span class="n">viewcone</span><span class="p">,</span> <span class="n">fov_low</span><span class="p">,</span> <span class="n">fov_high</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">viewcone</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Only supported for diffuse simulations&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">norm</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">viewcone</span><span class="p">))</span>
+
+    <span class="n">integral</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">fov_low</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">fov_high</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">norm</span> <span class="o">*</span> <span class="n">integral</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Maximilian Nöthe, Michele Peresano, Thomas Vuillaume.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

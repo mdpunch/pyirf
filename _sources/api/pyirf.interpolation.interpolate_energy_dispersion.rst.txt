@@ -1,0 +1,6 @@
+interpolate_energy_dispersion
+=============================
+
+.. currentmodule:: pyirf.interpolation
+
+.. autofunction:: interpolate_energy_dispersion
